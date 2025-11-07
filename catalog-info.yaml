@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: document.fraud.detection.service
-  title: Document-Fraud-Detection-Service
+  name: document.fraud.detection
+  title: Document-Fraud-Detection
   description: |
     A new prototype
 
   annotations:
-    gitlab.com/project-slug: dwp/user-centred-design/document-fraud-detection-service
+    gitlab.com/project-slug: dwp/user-centred-design/document-fraud-detection
 
   labels:
     dwp.gov.uk/version: 1.0.0
@@ -31,7 +31,7 @@ metadata:
   links:
     - icon: externalLink
       title: Repository
-      url: https://gitlab.com/dwp/user-centred-design/document-fraud-detection-service
+      url: https://gitlab.com/dwp/user-centred-design/document-fraud-detection
 
 spec:
   owner: group:default/backstage.group.user-centred-design

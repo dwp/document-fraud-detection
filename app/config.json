@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Document Fraud Detection Service",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true

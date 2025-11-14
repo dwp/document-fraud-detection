@@ -1,16 +1,61 @@
-{#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
 
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/custom.css" rel="stylesheet" type="text/css" />
+{% endblock %}
 
 {% block header %}
 
-    {{ govukHeader() }}
-    {{ govukServiceNavigation({
-        serviceName: serviceName
-    })}}
+{{
+    dwpHeader({
+    serviceName: serviceName,
+    serviceHref: "/index.html",
+    action: "Sign out",
+    actionHref: "#",
+    container: true
+})
+}}
+
+<div class="govuk-width-container">
+    {{ govukPhaseBanner({
+    tag: {
+    text: "Beta"
+    },
+    html: 'This is a new service - your <a class="govuk-link" href="#">feedback (opens in new
+        tab)</a> will help us improve it.'
+    }) }}
+
+    {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+    }) }}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+{{
+    dwpFooter({
+    meta: {
+    visuallyHiddenTitle: "About this website",
+    items: [
+    {
+    href: "",
+    text: "Accessibility statement"
+    },
+    {
+    href: "",
+    text: "Privacy"
+    }
+    ]
+    }
+})
+}}
 
 {% endblock %}

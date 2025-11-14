@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% set pageName="Upload documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Upload documents
+    </h1>
+    <p class="govuk-body">Upload passports, letters, bank statements and more. Documents must
+be:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>PDF</li>
+      <li>20MB or smaller</li>
+      <li>Utility bills</li>
+      <li>Unencrypted</li>
+      <li>Not password protected</li>
+    </ul>
+
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "fileUpload1",
+      label: {
+        text: "Upload a file"
+      },
+      javascript: true
+    }) }}
+  </div>
+</div>
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{% endblock %}

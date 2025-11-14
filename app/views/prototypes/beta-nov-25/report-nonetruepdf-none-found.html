@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% set pageName="Upload documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Report
+    </h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Document details
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              nonetrue.pdf
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Anomalies
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{govukTag({
+              text: "None found",
+              classes: "govuk-tag--green"
+              })}}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    {{ govukDetails({
+    summaryText: "How documents are checked",
+    text: "Documents undergo a series of checks, listed below. If anomalies are detected against any of the checks, the
+    document will be flagged."
+    }) }}
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Anomalies</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Signed</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Repaired</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">PDF source</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Blacklisted watermarks</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Layout</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text alignment</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text size</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text spacing</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">PDF structure</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "None found",
+            classes: "govuk-tag--green"
+            })}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}

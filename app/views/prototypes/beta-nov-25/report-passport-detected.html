@@ -1,0 +1,198 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% set pageName="Upload documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Report
+    </h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Document details
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              passport.pdf
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Anomalies
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{govukTag({
+              text: "Detected",
+              classes: "govuk-tag--red"
+              })}}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    {{ govukDetails({
+    summaryText: "How documents are checked",
+    text: "Documents undergo a series of checks, listed below. If anomalies are detected against any of the checks, the
+    document will be flagged."
+    }) }}
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Anomalies</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Signed</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              The creator of a PDF can embed their signature in the document. Modifying a signed PDF will notify the
+              creator. Commonly used for official or ‘valid’ documents.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Repaired</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Repairing a PDF is a necessary step if the document has been corrupted during editing.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">PDF source</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              The software that was used to create the PDF is checked against a blacklist of untrusted software.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Blacklisted watermarks</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Some blacklisted PDF template websites leave a watermark on the documents they generate.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Passport data</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              The Machine Readable Zone (MRZ) of a passport must match the global standard. Any difference indicates an
+              unofficial document.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Layout</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Copying, moving or deleting parts of a document may hide, repeat or change information.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text alignment</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Text margins that are too big or small can suggest the layout of a document has been altered.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text size</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Inconsistent sizes of letters or words can suggest the layout of a document has been altered.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text spacing</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              Different sized gaps between words may suggest that text has been added or replaced.
+            </span>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">PDF structure</th>
+          <td class="govuk-table__cell">
+            {{govukTag({
+            text: "Detected",
+            classes: "govuk-tag--red"
+            })}}
+            <br />
+            <span class="check-description">
+              PDF features that shouldn't be part of the document suggest it may have been altered e.g. annotations or
+              overlays.
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}

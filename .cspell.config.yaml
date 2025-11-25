@@ -5,7 +5,7 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 
 version: "0.2"
 
-name: document-fraud-detection-service
+name: document-fraud-detection
 
 failFast: true
 noConfigSearch: true

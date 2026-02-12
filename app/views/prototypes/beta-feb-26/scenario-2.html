@@ -1,0 +1,291 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Upload documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div>
+      <strong class="govuk-tag govuk-tag--red">
+        Detected
+      </strong>
+      <h1 class="govuk-heading-xl">
+        Document check report for scenario-2.pdf
+      </h1>
+    </div>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is a document check?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We check each document against a set of criteria to detect possible document tampering. These checks suggest further areas to examine within your own review.
+        <br>
+        <br>
+        These checks do not:
+        <br>
+        <br>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>understand what the document is or what the information means</li>
+          <li>assume relationships between other documents</li>
+          <li>indicate conclusively that fraud is present</li>
+        </ul>
+        <br>
+        If you determine further investigation is needed by a decision maker or investigations team, you may include the information provided in these checks to support your review.
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-m">
+      Visible checks (1)
+    </h2>
+
+    <p class="govuk-body">You will need to visually inspect the document for signs of tampering by opening and viewing it.</p>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Visible anomalies found</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document check</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Recommendations</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Concealed text
+            <br>
+            <strong class="govuk-tag govuk-tag--red govuk-!-margin-top-3">
+              Detected
+            </strong>
+          </th>
+          <td class="govuk-table__cell">
+            Text that has been made the same colour as the document background.
+          </td>
+          <td class="govuk-table__cell">
+            <ol class="govuk-list govuk-list--number">
+              <li>Open the document in a document viewer like Adobe Acrobat Reader.</li>
+              <li>Use the selection tool and the ‘select all’ shortcut (Ctrl + A) to highlight all text and objects in the document to uncover the hidden text.</li>
+              <li>Zoom in to review any differences in colour on the document.</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks that found no visible anomalies (8)
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">No visible anomalies found</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document check</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Edited information
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Hidden objects
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text size
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Passport standard
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Unexpected characters
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted watermark
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Error
+                </strong>
+                <br>
+                <p class="govuk-!-margin-top-2">Unable to perform this check.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <br>
+
+    <h2 class="govuk-heading-m">
+      Hidden checks (1)
+    </h2>
+
+    <p class="govuk-body">You will need to inspect the document’s properties or hidden data (metadata) for signs of tampering.</p>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Hidden checks found</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document check</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Recommendations</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Damage history
+            <br>
+            <strong class="govuk-tag govuk-tag--red govuk-!-margin-top-3">
+              Detected
+            </strong>
+          </th>
+          <td class="govuk-table__cell">
+            This document has been damaged and repaired in the past, which may be a sign that changes were made.
+          </td>
+          <td class="govuk-table__cell">
+            <ol class="govuk-list govuk-list--number">
+              <li>If possible, first contact the claimant to ask for an alternate document.</li>
+              <li>Cross-reference the other information available to check consistency between this document and claimant information.</li>
+              <li>Review naming conventions to check for odd or inconsistent file names.</li>
+              <li>Right-click the document to view document properties or document information, then inspect any file version history or modified timestamps.</li>
+              <li>If it is available, check if there is a digital IP address, digital signature or any information on where or how the repair occurred.</li>
+              <li>If you have an IP address, search online to verify whether the document originated from a plausible location (for example, from the United Kingdom).</li>
+            </ol>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Document origin
+            <br>
+            <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-top-3">
+              Error
+            </strong>
+          </th>
+          <td class="govuk-table__cell">
+            The document was created by untrusted software.
+          </td>
+          <td class="govuk-table__cell">
+            <p class="govuk-!-margin-top-2">Unable to perform this check.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks that found no hidden anomalies (3)
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">No visible anomalies found</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document check</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Data changes
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Digital signature
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  None found
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+  </div>
+</div>
+
+{% endblock %}

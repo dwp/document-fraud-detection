@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% set pageName="Documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Documents
+    </h1>
+    
+    <p class="govuk-body">There are no documents to display at the moment. Try uploading:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Passports</li>
+      <li>Birth certificates</li>
+      <li>Utility bills</li>
+      <li>Tenancy agreements</li>
+      <li>Wage slips</li>
+      <li>Bank statements</li>
+      <li>Council Tax documents</li>
+      <li>NHS letters</li>
+      <li>School letter</li>
+    </ul>
+
+    {{ govukButton({
+    text: "Upload documents",
+    href: "/prototypes/beta-feb-26/upload-documents"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

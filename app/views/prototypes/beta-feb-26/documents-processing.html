@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Documents" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          The documents were uploaded
+        </h3>
+        <p class="govuk-body">Please allow a few minutes for processing, before viewing the results.</p>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      Documents
+    </h1>
+
+  </div>
+</div>
+
+{{ govukButton({
+text: "Upload documents",
+href: "/prototypes/beta-nov-25/upload-documents"
+}) }}
+
+{{ govukWarningText({
+text: "Documents will expire 7 days after being uploaded.",
+iconFallbackText: "Warning"
+}) }}
+
+<p class="govuk-hint">Showing 1-6 of 6</p>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Anomalies</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Expiry</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">scenario-1.pdf</th>
+      <td class="govuk-table__cell">Processing...</td>
+      <td class="govuk-table__cell">7d</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">scenario-2.pdf</th>
+      <td class="govuk-table__cell">Processing...</td>
+      <td class="govuk-table__cell">7d</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/file-uploading.js"></script>
+{% endblock %}

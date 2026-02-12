@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Upload documents" %}
+{% set pageName="Document check report" %}
 
 {% block content %}
 
@@ -29,20 +29,19 @@
         </span>
       </summary>
       <div class="govuk-details__text">
-        We check each document against a set of criteria to detect possible document tampering. These checks suggest further areas to examine within your own review.
-        <br>
-        <br>
-        These checks do not:
-        <br>
-        <br>
+      <p class="govuk-body"> We check each document against a set of criteria to detect possible document tampering. These checks suggest further areas to examine within your own review.
+       </p>
+       <p style="margin-bottom:0;" class="govuk-body"> These checks do not:</p>
+        
         <ul class="govuk-list govuk-list--bullet">
           <li>understand what the document is or what the information means</li>
           <li>assume relationships between other documents</li>
           <li>indicate conclusively that fraud is present</li>
         </ul>
-        <br>
+        <p class="govuk-body">
         If you determine further investigation is needed by a decision maker or investigations team, you may include the information provided in these checks to support your review.
-      </div>
+      </p>
+     </div>
     </details>
 
     <h2 class="govuk-heading-m">
@@ -52,7 +51,7 @@
     <p class="govuk-body">You will need to visually inspect the document for signs of tampering by opening and viewing it.</p>
 
     <table class="govuk-table govuk-table--small-text-until-tablet">
-      <caption class="govuk-visually-hidden">Visible anomalies found</caption>
+      <caption class="govuk-visually-hidden">Visible checks found</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Document check</th>
@@ -70,7 +69,7 @@
             </strong>
           </th>
           <td class="govuk-table__cell">
-            Text that has been made the same colour as the document background.
+            Text has been made the same colour as the document background.
           </td>
           <td class="govuk-table__cell">
             <ol class="govuk-list govuk-list--number">
@@ -86,12 +85,12 @@
     <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Checks that found no visible anomalies (8)
+          Results from other visible checks (8)
         </span>
       </summary>
       <div class="govuk-details__text">
         <table class="govuk-table govuk-table--small-text-until-tablet">
-          <caption class="govuk-visually-hidden">No visible anomalies found</caption>
+          <caption class="govuk-visually-hidden">Results of visible document checks</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document check</th>
@@ -105,7 +104,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -115,7 +114,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -125,7 +124,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -135,7 +134,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -145,7 +144,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -155,7 +154,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -165,7 +164,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -178,7 +177,7 @@
                   Error
                 </strong>
                 <br>
-                <p class="govuk-!-margin-top-2">Unable to perform this check.</p>
+                <p class="govuk-!-margin-top-2">We were unable to run this check.</p>
               </td>
             </tr>
           </tbody>
@@ -238,7 +237,13 @@
             The document was created by untrusted software.
           </td>
           <td class="govuk-table__cell">
-            <p class="govuk-!-margin-top-2">Unable to perform this check.</p>
+            <p class="govuk-body">We were unable to run this check.</p>
+            <ol class="govuk-list govuk-list--number">
+              <li>Right-click the document to view document properties or document information, then inspect the creator or producer field.</li>
+              <li>Cross-reference examples of valid and suspicious combinations of creator and document type. For example, a bank statement created in Microsoft Word should be treated as suspicious.</li>
+              <li>Check for messaging, social media or screenshot creation tags that suggest that the document came from another source or was captured from a screenshot.</li>
+              <li>If possible, ask the claimant for alternate evidence if the document is a screenshot or saved through messaging or social media.</li>
+            </ol>
           </td>
         </tr>
       </tbody>
@@ -247,7 +252,7 @@
     <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Checks that found no hidden anomalies (3)
+          Results from other hidden checks (2)
         </span>
       </summary>
       <div class="govuk-details__text">
@@ -266,7 +271,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>
@@ -276,7 +281,7 @@
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  None found
+                  Not found
                 </strong>
               </td>
             </tr>

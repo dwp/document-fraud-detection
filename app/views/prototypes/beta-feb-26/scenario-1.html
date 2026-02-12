@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Upload documents" %}
+{% set pageName="Document check report" %}
 
 {% block content %}
 
@@ -29,19 +29,18 @@
         </span>
       </summary>
       <div class="govuk-details__text">
-        We check each document against a set of criteria to detect possible document tampering. These checks suggest further areas to examine within your own review.
-        <br>
-        <br>
-        These checks do not:
-        <br>
-        <br>
+       <p class="govuk-body"> We check each document against a set of criteria to detect possible document tampering. These checks suggest further areas to examine within your own review.
+       </p>
+       <p style="margin-bottom:0;" class="govuk-body"> These checks do not:</p>
+        
         <ul class="govuk-list govuk-list--bullet">
           <li>understand what the document is or what the information means</li>
           <li>assume relationships between other documents</li>
           <li>indicate conclusively that fraud is present</li>
         </ul>
-        <br>
+        <p class="govuk-body">
         If you determine further investigation is needed by a decision maker or investigations team, you may include the information provided in these checks to support your review.
+      </p>
       </div>
     </details>
 
@@ -52,7 +51,7 @@
     <p class="govuk-body">You will need to visually inspect the document for signs of tampering by opening and viewing it.</p>
 
     <table class="govuk-table govuk-table--small-text-until-tablet">
-      <caption class="govuk-visually-hidden">Visible anomalies found</caption>
+      <caption class="govuk-visually-hidden">Visible checks found</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Document check</th>
@@ -70,7 +69,7 @@
             </strong>
           </th>
           <td class="govuk-table__cell">
-            Text that has been made the same colour as the document background.
+            Text has been made the same colour as the document background.
           </td>
           <td class="govuk-table__cell">
             <ol class="govuk-list govuk-list--number">
@@ -210,12 +209,9 @@
           </td>
           <td class="govuk-table__cell">
             <ol class="govuk-list govuk-list--number">
-              <li>Copy and paste the text of the document into Microsoft Word and consider:
-                <br>
-                * if the text is misaligned or unreadable, the document might be genuine because of how characters have been ‘encoded’
-                <br>
-                * if the text pastes as cleanly or perfectly aligned, the document may have been edited or recreated </li>
-              <li>If possible, cross-check against a previously confirmed document from the same sender or institution to compare if they have similar encoding.</li>
+              <li>Copy and paste the text of the document into Microsoft Word and check for fonts like Webdings or Wingings. Consider the type of document to decide if these fonts were used to prevent copying and pasting genuine information, apply decoration, or to create false information.
+                </li>
+              <li>If possible, cross-check against a previously verified document from the same sender or institution to compare if they have a similar structure.</li>
               <li>If the document does not appear genuine, check for other signs of manipulation (for example, hidden objects).</li>
             </ol>
           </td>
@@ -280,7 +276,7 @@
               <li>Review naming conventions to check for odd or inconsistent file names.</li>
               <li>Right-click the document to view document properties or document information, then inspect any file version history or modified timestamps.</li>
               <li>If it is available, check if there is a digital IP address, digital signature or any information on where or how the repair occurred.</li>
-              <li>If you have an IP address, search online to verify whether the document originated from a plausible location (for example, from the United Kingdom).</li>
+              <li>If you have found an IP address, search online to verify whether the document originated from a plausible location (for example, from the United Kingdom).</li>
             </ol>
           </td>
         </tr>

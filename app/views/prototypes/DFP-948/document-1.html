@@ -1,0 +1,217 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Check report" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      We could not run all checks. 
+      <a class="govuk-notification-banner__link" href="#">Re-upload the document</a> to try again.
+    </p>
+  </div>
+</div>
+    
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+<div>
+      <strong class="govuk-tag govuk-tag--yellow">
+        Technical error
+      </strong>
+      <h1 class="govuk-heading-xl">
+        Check report for document-1.pdf
+      </h1>
+    </div>
+ <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results of checks on the document content</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document check</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted branding
+              </th>
+              <td class="govuk-table__cell">
+               
+              <p class="govuk-body">The document contains branding (a digital watermark) that suggests it was generated from an untrusted source. </p>
+              </td>
+               <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Technical error
+                </strong>
+               
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks with no results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results of visible document checks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document check</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Concealed text
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+              Covered content
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Document quality
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+               <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text size
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Passport code
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Unexpected characters
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Data changes
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document origin
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Repair history
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Security code
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+   
+
+   
+      </div>
+    </details>
+
+  </div>
+</div>
+
+{% endblock %}

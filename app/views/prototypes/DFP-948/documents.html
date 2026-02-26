@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Document checks" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% set html %}
+    <h3 class="govuk-notification-banner__heading">
+      The documents were uploaded
+    </h3>
+    <p class="govuk-body">Please allow a few minutes for processing before viewing the results.</p>
+    {% endset %}
+
+    {% if data['notifySuccess'] == 'visible' %}
+
+    {{ govukNotificationBanner({
+    html: html,
+    type: "success"
+    }) }}
+
+    {% else %}
+
+    <!-- hide notification -->
+
+    {% endif %}
+
+    <h1 class="govuk-heading-xl">
+      Document checks
+    </h1>
+
+  </div>
+</div>
+
+{{ govukButton({
+text: "Upload documents",
+href: "/prototypes/DFP-948/upload-documents"
+}) }}
+
+{{ govukWarningText({
+text: "Document check reports will expire 7 days after being uploaded.",
+iconFallbackText: "Warning"
+}) }}
+
+<p class="govuk-hint">Showing 1 to 2 of 2 reports</p>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Check results</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Expiry</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">document-1.pdf</th>
+      <td class="govuk-table__cell">
+        {{govukTag({
+        text: "Technical error",
+        classes: "govuk-tag--yellow"
+        })}}
+      </td>
+      <td class="govuk-table__cell">7 days</td>
+      <td class="govuk-table__cell">
+        <a href="/prototypes/DFP-948/document-1" class="govuk-link">View report</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">document-2.pdf</th>
+      <td class="govuk-table__cell">
+        {{govukTag({
+        text: "Detected",
+        classes: "govuk-tag--red"
+        })}}
+      </td>
+      <td class="govuk-table__cell">7 days</td>
+      <td class="govuk-table__cell">
+        <a href="/prototypes/DFP-948/document-2" class="govuk-link">View report</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

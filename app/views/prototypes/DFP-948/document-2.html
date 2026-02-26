@@ -1,0 +1,215 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Check report" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+<div>
+      <strong class="govuk-tag govuk-tag--red">
+        Detected
+      </strong>
+      <h1 class="govuk-heading-xl">
+       Check report for document-2.pdf
+      </h1>
+    </div>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Results of checks on the document content</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+       <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document check</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Result</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Concealed text
+          </th>
+          <td class="govuk-table__cell">
+           Some text is the same colour as the document background.
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Covered content
+          </th>
+          <td class="govuk-table__cell">
+            Text, shapes or images have been placed on top of other content, hiding it.
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Document quality
+          </th>
+          <td class="govuk-table__cell">
+         Differences in document quality suggest something has been added, edited or removed. 
+          </td>
+          <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Passport code
+          </th>
+          <td class="govuk-table__cell">
+           The Machine Readable Zone (MRZ) at the bottom of the passport does not exactly match the global standard. 
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+          Text alignment
+          </th>
+          <td class="govuk-table__cell">
+          Words, rows or columns do not line up as expected. 
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Text size
+          </th>
+          <td class="govuk-table__cell">
+          The sizing of letters or numbers within the document are inconsistent or unusual.
+          </td>
+          <td class="govuk-table__cell">
+           <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+        Text spacing
+          </th>
+          <td class="govuk-table__cell">
+           The spaces between text within the document are inconsistent or unusual.
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Unexpected characters
+          </th>
+          <td class="govuk-table__cell">
+            Unusual characters or symbols appear in the document.
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Untrusted branding
+          </th>
+          <td class="govuk-table__cell">
+           The document contains branding (a digital watermark) that suggests it was generated from an untrusted source. 
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Data changes
+          </th>
+          <td class="govuk-table__cell">
+          Unexpected changes have been made to the data of this document.
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Document origin
+          </th>
+          <td class="govuk-table__cell">
+          The document was created by untrusted software.
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Repair history
+          </th>
+          <td class="govuk-table__cell">
+           This document has been damaged and repaired in the past, which may be a sign that changes were made.
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Security code
+          </th>
+          <td class="govuk-table__cell">
+             A security code, known as a digital signature, has been found.
+          </td>
+          <td class="govuk-table__cell">
+             <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  
+
+   
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Document checks" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          The documents were uploaded
+        </h3>
+        <p class="govuk-body">Please allow a few minutes for processing, before viewing the results.</p>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      Document checks
+    </h1>
+
+  </div>
+</div>
+
+{{ govukButton({
+text: "Upload documents",
+href: "/prototypes/DFP-948/upload-documents"
+}) }}
+
+{{ govukWarningText({
+text: "Document check reports will expire 7 days after being uploaded.",
+iconFallbackText: "Warning"
+}) }}
+
+     <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is a document check?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+      <p class="govuk-body"> We check each document against a set of criteria to detect possible document tampering in the document's content (visible) or data (hidden). These checks suggest further areas to examine within your own review.
+       </p>
+       <p class="govuk-body"> These checks do not:</p>
+        
+        <ul class="govuk-list govuk-list--bullet">
+          <li>understand what the content in the document contextually means</li>
+          <li>assume relationships between other documents</li>
+          <li>indicate conclusively that fraud is present</li>
+        </ul>
+        <p class="govuk-body">
+        If you determine further investigation is needed by a decision maker or investigations team, you may include the information provided in these checks to support your review.
+      </p>
+        <p class="govuk-body">You can upload:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>passports</li>
+      <li>birth certificates</li>
+      <li>utility bills</li>
+      <li>tenancy agreements</li>
+      <li>wage slips</li>
+      <li>bank statements</li>
+      <li>council tax documents</li>
+      <li>NHS letters</li>
+      <li>school letters</li>
+    </ul>
+     </div>
+    </details>
+<p class="govuk-hint">Showing 1 to 2 of 2 reports</p>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Check results</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Expiry</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">document-1.pdf</th>
+      <td class="govuk-table__cell">Processing...</td>
+      <td class="govuk-table__cell">7 days</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">document-2.pdf</th>
+      <td class="govuk-table__cell">Processing...</td>
+      <td class="govuk-table__cell">7 days</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+  <div id="redirect"
+     data-redirect-url="/prototypes/DFP-948/documents">
+</div>
+
+  <script src="/public/javascripts/redirect.js"></script>
+
+
+{% endblock %}
+

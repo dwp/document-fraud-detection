@@ -13,6 +13,17 @@
     
     <p class="govuk-body">There are no document check reports. </p>
 
+
+ 
+  </div>
+</div>
+
+    {{ govukButton({
+    text: "Upload documents",
+    href: "/prototypes/DFP-948/upload-documents"
+    }) }}
+
+     
     <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -46,14 +57,4 @@
     </ul>
      </div>
     </details>
-  
-
-    {{ govukButton({
-    text: "Upload documents",
-    href: "/prototypes/DFP-948/upload-documents"
-    }) }}
-
-  </div>
-</div>
-
 {% endblock %}

@@ -32,13 +32,7 @@
 text: "Upload documents",
 href: "/prototypes/DFP-948/upload-documents"
 }) }}
-
-{{ govukWarningText({
-text: "Document check reports will expire 7 days after being uploaded.",
-iconFallbackText: "Warning"
-}) }}
-
-     <details class="govuk-details">
+  <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           What is a document check?
@@ -71,6 +65,12 @@ iconFallbackText: "Warning"
     </ul>
      </div>
     </details>
+{{ govukWarningText({
+text: "Document check reports will expire 7 days after being uploaded.",
+iconFallbackText: "Warning"
+}) }}
+
+   
 <p class="govuk-hint">Showing 1 to 2 of 2 reports</p>
 <table class="govuk-table">
   <thead class="govuk-table__head">

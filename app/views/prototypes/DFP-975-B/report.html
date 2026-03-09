@@ -1,0 +1,233 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Document check report" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Check report for option-a.pdf
+    </h1>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Visible checks found</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document check</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Description</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Result</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Passport code
+          </th>
+          <td class="govuk-table__cell">
+            The Machine Readable Zone (MRZ) at the bottom of the passport does not exactly match the global standard.
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Covered content
+          </th>
+          <td class="govuk-table__cell">
+            Text, shapes or images have been placed on top of other content, hiding it.
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Repair history
+          </th>
+          <td class="govuk-table__cell">
+            This document's data shows it has been damaged and repaired in the past, which may be a sign that changes were made.
+          </td>
+          <td class="govuk-table__cell">
+            Data
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks with nothing found in the results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results of visible document checks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document check
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Concealed text
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document quality
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text size
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Unexpected characters
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted branding
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Data changes
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document origin
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Security code
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <br>
+
+    <h2 class="govuk-heading-m">
+      How to confirm the checks
+    </h2>
+
+    <h3 class="govuk-heading-s">
+      Passcode code
+    </h3>
+
+    <p class="govuk-body">Send the document to the Document Examination Team for further examination.</p>
+
+    <h3 class="govuk-heading-s">
+      Concealed text or covered content
+    </h3>
+
+    <p class="govuk-body">Select all information in the document to highlight any empty selections that may be hiding text in important places, such as the address or amounts of money.</p>
+
+    <h3 class="govuk-heading-s">
+      Repair history, data changes or document origin
+    </h3>
+
+    <p class="govuk-body">If possible, compare the created and modified information in the document properties for anything unusual. For example, a bank statement would not usually be created or modified by a named person or software like Microsoft Word.</p>
+
+  </div>
+</div>
+
+{% endblock %}

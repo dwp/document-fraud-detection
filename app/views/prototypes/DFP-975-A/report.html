@@ -1,0 +1,233 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Document check report" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Check report for option-a.pdf
+    </h1>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Visible checks found</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document check</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Description</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Result</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Passport code
+          </th>
+          <td class="govuk-table__cell">
+            The Machine Readable Zone (MRZ) at the bottom of the passport does not exactly match the global standard.
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Repair history
+          </th>
+          <td class="govuk-table__cell">
+            This document's data shows it has been damaged and repaired in the past, which may be a sign that changes were made.
+          </td>
+          <td class="govuk-table__cell">
+            Data
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Security code
+          </th>
+          <td class="govuk-table__cell">
+            A security code, known as a digital signature, has been found.
+          </td>
+          <td class="govuk-table__cell">
+            Data
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Technical error
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks with nothing found in the results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results of visible document checks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document check
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Concealed text
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Covered content
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document quality
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text size
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Unexpected characters
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted branding
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Data changes
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document origin
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <br>
+
+    <h2 class="govuk-heading-m">
+      Recommendations
+    </h2>
+
+    <p class="govuk-body">Each document check is not suspicious alone and should be cross-referenced with other document checks and claimant information to identify any unusual patterns.</p>
+
+    <h3 class="govuk-heading-s">
+      Recommended actions:
+    </h3>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>If any of the details are not visible or clear, request another version that shows the full detail.</li>
+      <li>Check for inconsistencies within headers, addresses, signatures and totals, paying particular attention to the first page. These are frequently altered areas.</li>
+      <li>Compare names, dates and amounts for consistency across pages.</li>
+      <li>Confirm incoming and outgoing totals add up. Sudden jumps may indicate something was removed.</li>
+      <li>Select all text to find any empty selections that may show where content has been covered or replaced.</li>
+      <li>Check if the created and modified fields in the document's properties make sense for that document type. For example, a bank statement is unlikely to be created in Word or by a specific individual.</li>
+      <li>Compare the document to any verified template you may have available for the same sender or institution.</li>
+    </ol>
+
+    <p class="govuk-body">If you see a pattern within these checks that leads you to suspect the document has been tampered with, refer the documents to the relevant investigations team or decision maker.</p>
+
+  </div>
+</div>
+
+{% endblock %}

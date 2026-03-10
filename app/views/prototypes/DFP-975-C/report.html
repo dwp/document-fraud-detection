@@ -7,7 +7,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
-      Check report for option-b.pdf
+      Check report for option-c.pdf
     </h1>
 
     <table class="govuk-table govuk-table--small-text-until-tablet">
@@ -21,12 +21,44 @@
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
+         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-            Passport code
+            Text alignment
           </th>
           <td class="govuk-table__cell">
-            The Machine Readable Zone (MRZ) at the bottom of the passport does not exactly match the global standard.
+           Words, rows or columns do not line up as expected. 
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+          Text size
+          </th>
+          <td class="govuk-table__cell">
+           The sizing of letters or numbers within the document are inconsistent or unusual.
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+          Text spacing
+          </th>
+          <td class="govuk-table__cell">
+          The spaces between words or characters within the document are inconsistent or unusual.
           </td>
           <td class="govuk-table__cell">
             Content
@@ -39,10 +71,10 @@
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-            Covered content
+            Unexpected characters
           </th>
           <td class="govuk-table__cell">
-            Text, shapes or images have been placed on top of other content, hiding it.
+           Unusual characters or symbols appear in the document.
           </td>
           <td class="govuk-table__cell">
             Content
@@ -55,10 +87,26 @@
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-            Repair history
+            Untrusted branding
           </th>
           <td class="govuk-table__cell">
-            This document's data shows it has been damaged and repaired in the past, which may be a sign that changes were made.
+          The document contains secondary branding (a digital watermark) that suggests it was generated from an untrusted source. 
+          </td>
+          <td class="govuk-table__cell">
+            Content
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Detected
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Security code
+          </th>
+          <td class="govuk-table__cell">
+            A security code, known as a digital signature, has been found.
           </td>
           <td class="govuk-table__cell">
             Data
@@ -88,9 +136,19 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
+            <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
                 Concealed text
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Covered content
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
@@ -110,47 +168,7 @@
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
-                Text alignment
-              </th>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  Not found
-                </strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                Text size
-              </th>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  Not found
-                </strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                Text spacing
-              </th>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  Not found
-                </strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                Unexpected characters
-              </th>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green">
-                  Not found
-                </strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                Untrusted branding
+                Passport code
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
@@ -180,7 +198,7 @@
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
-                Security code
+                Repair history
               </th>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
@@ -199,23 +217,28 @@
       How to confirm the checks
     </h2>
 
-    <h3 class="govuk-heading-s">
-      Passcode code
-    </h3>
-
-    <p class="govuk-body">Send the document to the Document Examination Team for further examination.</p>
-
-    <h3 class="govuk-heading-s">
-      Concealed text or covered content
-    </h3>
-
-    <p class="govuk-body">Select all information in the document to highlight any empty selections that may be hiding text in important places, such as the address or amounts of money.</p>
+    <h3 class="govuk-heading-s"> 
+      Text alignment, size or spacing
+    </h3> 
+      <p class="govuk-body">Compare how letters, numbers and words line and size up to each other. Anything that seems out of place may be a sign that something was replaced or removed.</p>
 
     <h3 class="govuk-heading-s">
-      Repair history, data changes or document origin
+      Unexpected characters
     </h3>
 
-    <p class="govuk-body">If possible, compare the created and modified information in the document properties for anything unusual. For example, a bank statement would not usually be created or modified by a named person or software like Microsoft Word.</p>
+    <p class="govuk-body">Select all content and copy it into a text editor like Microsoft Word. If there is a mix of unusual characters and recognisable wording, it may be a sign that changes have been made. </p>
+
+    <h3 class="govuk-heading-s">
+     Untrusted branding
+    </h3>
+
+    <p class="govuk-body">Zoom in to search for a second logo or brand that should not be there. For example, a utility bill should not have branding for a freelance or template website. </p>
+
+    <h3 class="govuk-heading-s">
+     Security code
+    </h3>
+
+    <p class="govuk-body">This check is not suspicious on its own. Digital signatures are often added to authentic documents. Compare this with other document checks for any signs of editing.</p>
 
   </div>
 </div>

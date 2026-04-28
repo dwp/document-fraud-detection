@@ -1,0 +1,219 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Damaged file error" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+     Check report for document-1.pdf
+    </h1>
+
+  
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#document">
+        Document
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#page-checks">
+       Page checks (4)
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#file-checks">
+       File checks (2)
+      </a>
+    </li>
+  
+  </ul>
+  <div class="govuk-tabs__panel" id="document">
+    <h2 class="govuk-heading-l">Document</h2>
+  <p>Placeholder for document visual</p>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="page-checks">
+    <h2 class="govuk-heading-l">Page checks</h2>
+ <h3> <strong class="govuk-tag govuk-tag--yellow">1</strong> Document quality (2 found)</h3>
+<p class="govuk-body">Differences in document quality suggest something has been added, edited or removed.</p>
+
+<p class="govuk-body">Zoom in around areas that appear blurred, jagged or off-colour in comparison to the rest of the document. This may be a sign that changes were made or that the document was created from different sources.</p>
+<p class="govuk-body"><a href="#">Page 1, top left</a> | <a href="#">Page 1, bottom right</a></p>
+ <h3> <strong class="govuk-tag govuk-tag--yellow">2</strong> Concealed text (1 found)</h3>
+<p class="govuk-body">Some text is the same colour as the document background.
+</p>
+
+<p class="govuk-body">Select all information in the document to highlight any empty selections that may be hiding text in important areas, such as the address or amounts of money.
+</p>
+<p class="govuk-body"><a href="#">Page 1, top left</a> </p>
+<h3> <strong class="govuk-tag govuk-tag--yellow">3</strong> Text alignment (4 found)</h3>
+<p class="govuk-body">Words, rows or columns do not line up as expected.
+</p>
+
+<p class="govuk-body">Compare how letters, numbers and words line and size up to each other. Anything that seems out of place may be a sign that something was replaced or removed.
+</p>
+<p class="govuk-body"><a href="#">Page 1, top right</a> | <a href="#">Page 1, middle left</a> | <a href="#">Page 1, middle centre</a> | <a href="#">Page 1, bottom centre</a></p>
+<h3> <strong class="govuk-tag govuk-tag--yellow">4</strong> Text size (4 found)</h3>
+<p class="govuk-body">The sizing of letters or numbers within the document are inconsistent or unusual.
+
+</p>
+
+<p class="govuk-body">Compare how letters, numbers and words line and size up to each other. Anything that seems out of place may be a sign that something was replaced or removed.
+</p>
+<p class="govuk-body"><a href="#">Page 1, top right</a> | <a href="#">Page 1, middle left</a> | <a href="#">Page 1, middle centre</a> | <a href="#">Page 1, bottom centre</a></p>
+
+     <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Page checks with nothing found in the results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results where nothing was found</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+           
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Covered content
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+           
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Passport code
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               <span style="white-space: nowrap;"> Unexpected characters</span>
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted branding
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="file-checks">
+    <h2 class="govuk-heading-l">File checks</h2>
+      <p class="govuk-body">These checks relate to the document's digital data. You will not be able to confirm these checks yourself.</p>
+   <h3 class="govuk-heading-m">
+     Data changes
+    </h3>
+<p class="govuk-body">Unexpected changes have been made to the digital data or structure of this file.
+</p>
+    
+<p class="govuk-body">
+ We would not expect this with an original file.
+</p>
+<h3 class="govuk-heading-m">
+    Repair history
+    </h3>
+<p class="govuk-body">This file's digital data shows the file has been damaged and repaired in the past, which may be a sign that changes were digitally made to it.
+
+</p>
+     
+<p class="govuk-body">
+We would not expect this with an original file.
+</p>
+ <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          File checks with nothing found in the results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results where nothing was found</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+           
+            
+          
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document origin
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+          
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Security code
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  
+  </div>
+ 
+</div>
+
+  </div>
+</div>
+
+{% endblock %}

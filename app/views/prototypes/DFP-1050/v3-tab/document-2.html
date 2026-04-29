@@ -23,19 +23,23 @@
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#summary">
-        Summary
+      <a class="govuk-tabs__tab" href="#page-checks">
+        Page checks (0)
       </a>
     </li>
    
-  
+  <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#file-checks">
+        file checks (0)
+      </a>
+    </li>
   </ul>
   <div class="govuk-tabs__panel" id="document">
     <h2 class="govuk-heading-l">Document</h2>
   <p>Placeholder for document visual</p>
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="summary">
-    <h2 class="govuk-heading-l">Summary</h2>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="page-checks">
+    <h2 class="govuk-heading-l">Page checks</h2>
   <p class="govuk-body">We did not find anything when checking this document.</p>
 
     <p class="govuk-body">If you identify a pattern within the document that still leads you to suspect the document is not genuine, refer the document to the relevant investigations team or decision maker.</p>
@@ -147,6 +151,35 @@
                 </strong>
               </td>
             </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="file-checks">
+    <h2 class="govuk-heading-l">File checks</h2>
+  <p class="govuk-body">We did not find anything when checking this document.</p>
+
+    <p class="govuk-body">If you identify a pattern within the document that still leads you to suspect the document is not genuine, refer the document to the relevant investigations team or decision maker.</p>
+
+    <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Checks with nothing found in the results
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Document checks detected</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
                 Data changes
@@ -192,7 +225,6 @@
       </div>
     </details>
   </div>
-
  
 </div>
 

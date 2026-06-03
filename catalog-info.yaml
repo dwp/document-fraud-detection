@@ -4,7 +4,7 @@ metadata:
   name: document.fraud.detection
   title: Document-Fraud-Detection
   description: |
-    A new prototype
+   The document fraud detection service looks for signs of editing on original documents, which couild be a sign of tampering.
 
   annotations:
     gitlab.com/project-slug: dwp/user-centred-design/document-fraud-detection
@@ -14,7 +14,7 @@ metadata:
     dwp.gov.uk/license: unknown
 
     dwp.gov.uk/last-verified.by: Claire Rooney
-    dwp.gov.uk/last-verified.on: 2026-04-29
+    dwp.gov.uk/last-verified.on: 2026-06-01
 
     dwp.gov.uk/open-source.approved: "true"
     dwp.gov.uk/open-source.location: none

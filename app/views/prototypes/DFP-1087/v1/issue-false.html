@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Report a false positive or negative" %}
+
+{% block content %}
+   
+<h1 class="govuk-heading-l">Report a false positive or negative</h1>
+<form method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="ReportedType-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+      What would you like to report?
+      </h2>
+    </legend>
+    <div id="ReportedType-hint" class="govuk-hint">
+     A false positive identifies an issue incorrectly. A false negative does not identify the issue at all. 
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="type1" name="reportedType" type="radio" value="False positive">
+        <label class="govuk-label govuk-radios__label" for="type1">
+          False positive
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="type2" name="reportedType" type="radio" value="False negative">
+        <label class="govuk-label govuk-radios__label" for="type2">
+        False negative
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
+
+ 
+<p class="govuk-body">Return to the <a href="document-100" class="govuk-link">check report for document1.pdf</a> </p>
+
+{% endblock %}

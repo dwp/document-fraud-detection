@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Location of the issue" %}
+
+{% block content %}
+   
+<h1 class="govuk-heading-l">Location of the false positive </h1>
+
+  <form method="post">
+    <div class="govuk-form-group">
+   <input type="hidden" name="pageNo" value="Page 1">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+      Where is the issue located?
+      </h2>
+    </legend>
+       <h3 class="govuk-heading-s">Page 1</h3>
+    <div class="govuk-radios data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="1 - Document quality">
+        <label class="govuk-label govuk-radios__label" for="location1">
+        1 - Document quality
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location2" name="location" type="radio" value="2 - Text spacing">
+        <label class="govuk-label govuk-radios__label" for="location2">
+        2 - Text spacing
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location3" name="location" type="radio" value="3 - Text size">
+        <label class="govuk-label govuk-radios__label" for="location3">
+        3 - Text size
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location4" name="location" type="radio" value="4 - Text spacing">
+        <label class="govuk-label govuk-radios__label" for="location4">
+        4 - Text spacing
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location5" name="location" type="radio" value="5 - Document quality">
+        <label class="govuk-label govuk-radios__label" for="location5">
+        5 - Document quality
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
+
+
+
+ 
+
+{% endblock %}

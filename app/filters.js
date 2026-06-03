@@ -8,3 +8,10 @@ const addFilter = govukPrototypeKit.views.addFilter
 
 // Add your filters here
 
+addFilter('plural', function (content) {
+    if(content == '1'){
+      return content + " issue";
+    }
+    else {
+        return content + " issues";}
+})

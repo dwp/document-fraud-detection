@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Done" %}
+
+{% block content %}
+
+   
+<form method="post">
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Are you sure you want to remove issue  {% for issue in data['issues'] %} 
+                  {% if loop.index0 == data['loop'] %}
+                    {{ loop.index }}?
+                  {% endif %}
+                {% endfor %}
+        </h1>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="delete" name="delete" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="delete">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="delete-2" name="delete" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="delete-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</form>
+
+
+ 
+
+{% endblock %}

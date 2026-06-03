@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-1087.html" %}
 
 {% set pageName="Check report" %}
 
@@ -36,7 +36,16 @@
   </ul>
   <div class="govuk-tabs__panel" id="document">
     <h2 class="govuk-heading-l">Document</h2>
-  <img src="/public/images/10-2.png" width="100%">
+    <table style="width:100%; background:url(/public/images/pdf-header.png);background-repeat:no-repeat; background-position:top left; background-size:contain; background-color: black;">
+      <tr>
+        <td style="width:50%;"></td>
+       
+        <td style="width:50%;">
+          <a href="document-101" role=""button" class="govuk-button govuk-button--inverse" data-module="govuk-button" style="margin-bottom:2px;">Hide labels</a> 
+          <a href="document-110" role=""button"  type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button" style="margin-bottom:2px;">Hide grid</a></td>
+      </tr>
+    </table>
+  <img src="/public/images/bank-statement-03-grid-numbers.png" width="100%" alt="A bank statement with 9 grids: top left, top centre, top right, middle left, middle centre, middle right, bottom left, bottom centre, bottom right. There are also 5 labels (numbered 1 to 5) in different grids.">
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="summary">
     <h2 class="govuk-heading-l">Summary</h2>
@@ -68,22 +77,7 @@
           
           
         </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">
-            Text alignment
-          </th>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--red">
-              2 found
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <p class="govuk-body">Words, rows or columns do not line up as expected. </p>
-       
-          </td>
-          
-          
-        </tr>
+        
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
           Text size
@@ -207,6 +201,16 @@
                 </strong>
               </td>
             </tr>
+                <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Not found
+                </strong>
+              </td>
+            </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
                <span style="white-space: nowrap;"> Unexpected characters</span>
@@ -288,13 +292,13 @@
         </tr>
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-          2 - Document quality
+          5 - Document quality
           </th>
           <td class="govuk-table__cell">
             <a href="#document">Page 1</a>
           </td>
           <td class="govuk-table__cell">
-          Top right
+         Middle centre
           </td>
          
           
@@ -318,75 +322,48 @@
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">
-        3 - Text alignment
-          </th>
-          <td class="govuk-table__cell">
-            <a href="#document">Page 1</a>
-          </td>
-          <td class="govuk-table__cell">
-           Top left
        
-          </td>
-          
-          
-        </tr>
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-          4 - Text alignment
+          2 - Text spacing
           </th>
           <td class="govuk-table__cell">
            <a href="#document">Page 1</a>
           </td>
           <td class="govuk-table__cell">
-          Top right
+          Middle left
           </td>
          
           
         </tr>
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-         5 - Text sizing
+         3 - Text size
           </th>
            <td class="govuk-table__cell">
             <a href="#document">Page 1</a>
           </td>
           <td class="govuk-table__cell">
-         Top right
+        Overlaps: Middle left, Middle centre
           </td>
          
          
         </tr>
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">
-       6 - Text spacing
+       4 - Text spacing
           </th>
             <td class="govuk-table__cell">
             <a href="#document">Page 1</a>
           </td>
           <td class="govuk-table__cell">
-        Top right
+        Middle centre
 
           </td>
          
         
         </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">
-      7 - Text size
-
-          </th>
-           <td class="govuk-table__cell">
-           <a href="#document">Page 2</a>
-          </td>
-          <td class="govuk-table__cell">
-        Middle right
-
-          </td>
-         
-         
-        </tr>
+        
        
       </tbody>
     </table>

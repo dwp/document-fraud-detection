@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Email" %}
+
+{% block content %}
+
+   
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <form method="post">
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="consent-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Can we also share your email address with our team? 
+      </h1>
+    </legend>
+    <div id="consent-hint" class="govuk-hint">
+      We will only contact you if we need more information about an issue you reported. 
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="consent1" name="consent" type="radio" value="yes" aria-describedby="consent-item-hint">
+        <label class="govuk-label govuk-radios__label" for="consent1">
+         Yes
+        </label>
+        
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="consent2" name="consent" type="radio" value="no" aria-describedby="consent-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="consent2">
+         No
+        </label>
+       
+      </div>
+    </div>
+  </fieldset>
+
+
+</div>
+   <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+          </button>
+</form>
+  </main>
+</div>
+
+ 
+
+{% endblock %}

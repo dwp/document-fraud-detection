@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-1087.html" %}
 
 {% set pageName="Check report" %}
 
@@ -32,7 +32,15 @@
   </ul>
   <div class="govuk-tabs__panel" id="document">
     <h2 class="govuk-heading-l">Document</h2>
-  <p> <img src="/public/images/10-3.png" width="100%"></p>
+     <table style="width:100%; background:url(/public/images/pdf-header.png);background-repeat:no-repeat; background-position:top left; background-size:contain; background-color: black;">
+      <tr>
+        <td style="width:50%;"></td>
+       
+        <td style="width:50%;">
+           <a href="document-200" role="button"  type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button" style="margin-bottom:2px;">Hide grid</a></td>
+      </tr>
+    </table>
+  <img src="/public/images/council-tax-01-grid.png" width="100%" alt="A council tax bill with 9 grids: top left, top centre, top right, middle left, middle centre, middle right, bottom left, bottom centre, bottom right.">
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="summary">
     <h2 class="govuk-heading-l">Summary</h2>

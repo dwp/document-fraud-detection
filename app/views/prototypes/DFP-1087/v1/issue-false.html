@@ -8,7 +8,7 @@
 
 {% block content %}
    
-<h1 class="govuk-heading-l">Report a false positive or negative</h1>
+<h1 class="govuk-heading-l">Report a false result</h1>
 <form method="post">
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="ReportedType-hint">
@@ -17,21 +17,25 @@
       What would you like to report?
       </h2>
     </legend>
-    <div id="ReportedType-hint" class="govuk-hint">
-     A false positive identifies an issue incorrectly. A false negative does not identify the issue at all. 
-    </div>
+   
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="type1" name="reportedType" type="radio" value="False positive">
         <label class="govuk-label govuk-radios__label" for="type1">
           False positive
         </label>
+        <div id="falsePositive-hint" class="govuk-hint govuk-radios__hint">
+         Something was identified incorrectly.
+        </div>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="type2" name="reportedType" type="radio" value="False negative">
         <label class="govuk-label govuk-radios__label" for="type2">
         False negative
         </label>
+         <div id="falseNegative-hint" class="govuk-hint govuk-radios__hint">
+         Something is missing and should have been identified. 
+        </div>
       </div>
     </div>
   </fieldset>

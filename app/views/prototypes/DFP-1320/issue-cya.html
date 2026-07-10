@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Check your answers" %}
+
+{% block content %}
+   
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-l">Check your answers </h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+   
+        
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Report type
+            </dt>
+           
+            <dd class="govuk-summary-list__value">
+            {% if data['reportedType'] %}{{data['reportedType'] }} {% else %} False negative {% endif %} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+               {% if data['reportedType'] %}<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> between false positive and negative</span></a>{% endif %} 
+            </dd>
+          </div> 
+         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Page number
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['pageNo']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> page number</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Location
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['location']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> location</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Description
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['checkName']}}{% if data['titleOfIssue'] %}: {{ data['titleOfIssue']}} {% endif %} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> description</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              More details
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['moreDetail']}}
+            </dd> <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> more detail</span></a>
+            </dd>
+          </div>
+        </dl>
+       
+       <form method="post">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+          </button>
+        </form>
+      </div>
+    </div>
+ 
+
+ 
+
+
+{% endblock %}

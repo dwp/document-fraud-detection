@@ -1,0 +1,49 @@
+.key-tint {
+    &—yellow-1 {
+        background-color: govuk-colour("yellow");
+        color: black;
+    }
+    &—yellow-2 {
+        background-color: govuk-colour("yellow", $variant: "tint-50");
+        color: black;
+    }
+       &—orange-1 {
+        background-color: govuk-colour("orange");
+        color: black;
+    }
+    &—orange-2 {
+        background-color: govuk-colour("orange", $variant: "tint-50");
+        color: black;
+    }
+    &—magenta-1 {
+        background-color: govuk-colour("magenta", $variant: "shade-25");
+       color: white;
+    }
+    &—magenta-2 {
+        background-color: govuk-colour("magenta", $variant: "tint-50");
+        color: black;
+    }
+       &—purple-1 {
+        background-color: govuk-colour("purple");
+       color: white;
+    }
+    &—purple-2 {
+        background-color: govuk-colour("purple", $variant: "tint-50");
+        color: black;
+    }
+       &—green-1 {
+        background-color: govuk-colour("green", $variant: "shade-25");
+       color: white;
+    }
+    &—green-2 {
+        background-color: govuk-colour("green", $variant: "tint-50");
+       color: black;
+    }
+     &—red-border {
+        border-color: govuk-colour("red", $variant: "tint-50");
+        background-color: govuk-colour("white");
+        border-width: 2px;
+        border-style: solid;
+       color: black;
+    }
+}

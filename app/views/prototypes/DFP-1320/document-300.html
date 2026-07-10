@@ -1,0 +1,229 @@
+{% extends "layouts/main-1087.html" %}
+
+{% set pageName="Check report" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+     Check report for document-1.pdf
+    </h1>
+    <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#document">
+        Document
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#summary">
+        Summary
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#details">
+       Details
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="document">
+    <h2 class="govuk-heading-l">Document</h2>
+    <table style="width:100%; background:url(/public/images/pdf-header-white.png);background-repeat:no-repeat; background-position:top left; background-size:contain; background-color: white; border: 1px #cecece solid;">
+      <tr>
+        <td style="width:50%;"></td>
+           <td style="width:50%;">
+               <a href="document-301" role="button"  type="submit" class="govuk-button govuk-button--inverse" data-module="govuk-button" style="margin-bottom:2px;">Show grid</a></td>
+      </tr>
+    </table>
+   <img src="/public/images/1320-data-checks.png" width="100%" alt="A bank statement outlined in red, with a red label indicating 'Issues found'">
+  </div>
+
+   <!-- SUMMARY TAB -->
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="summary">
+    <h2 class="govuk-heading-l">Summary</h2>
+      <h3>File property checks</h3>
+            <p class="govuk-body-s">File property checks relate to the file's digital data. </p>
+ <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">File property checks found on this document</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="25%">Document check</th>
+          <th scope="col" class="govuk-table__header" width="20%">Result</th>
+          <th scope="col" class="govuk-table__header" >Description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+         Data changes
+          </th>
+            <td class="govuk-table__cell">
+              Found
+          </td>
+          <td class="govuk-table__cell">
+          Unexpected changes have been made to the digital data of this file.
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+           Document origin
+          </th>
+          <td class="govuk-table__cell">
+          Found
+          </td>
+          <td class="govuk-table__cell">
+            This file's digital data shows it was created by untrusted software.
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+        Repair history
+          </th>
+           <td class="govuk-table__cell">
+              Found
+          </td>
+          <td class="govuk-table__cell">
+    This file's digital data shows the file has been damaged and repaired in the past, which may be a sign that changes were digitally made to it.
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+       Security code
+          </th>
+           <td class="govuk-table__cell">
+              Found
+          </td>
+          <td class="govuk-table__cell">
+            	There is a security code in the file's digital data, which usually signals a document's authenticity if no other checks are found.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+     <details class="govuk-details govuk-!-width-two-thirds">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Not found or applicable
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-visually-hidden">Results of visible document checks</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document check</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Result</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Concealed text
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Covered content
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Document quality
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Passport code
+              </th>
+              <td class="govuk-table__cell">
+                  Not applicable
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+               Text alignment
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text size
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Text spacing
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Unexpected characters
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+             <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Untrusted branding
+              </th>
+              <td class="govuk-table__cell">
+                  Not found
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- DETAILS TAB -->
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details">
+    <h2 class="govuk-heading-l">Details</h2>
+  <h3 class="govuk-heading-m">File property checks</h3>
+   <p class="govuk-body">You will not be able to confirm the data yourself unless you can access the file's properties and metadata. We would not expect to find any issues in original documents.  </p>
+   <h3 class="govuk-heading-s">
+    Data changes or repair history
+    </h3>
+    <p class="govuk-body">Our checks have detected that something unexpected has happened to the file. We would not expect this with an original file.
+ </p>
+<h3 class="govuk-heading-s">
+    Document origin
+    </h3>
+    <p class="govuk-body">This file was created by software that we do not expect for genuine documents.</p>
+    <h3 class="govuk-heading-s">
+    Security code
+    </h3>
+    <p class="govuk-body">A security code, known as a digital signature, is usually a sign of a document's authenticity if no other document checks have been detected. </p>
+    <p class="govuk-body">For example, if this check appears with covered content or data changes, it may be a sign that the original document was altered. </p>
+
+  
+  </div>
+</div>
+
+  <a href="issue-n-location" role="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-bottom:2px;">Give feedback on a result</a>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Location of the issue" %}
+
+{% block content %}
+   <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Location of the issue </h1>
+
+  <form method="post">
+    <div class="govuk-form-group">
+   <input type="hidden" name="pageNo" value="Page 1">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+      Which issue would you like to give feedback on?
+      </h2>
+       <div id="feedback-hint" class="govuk-hint">
+     Use the details or highlights view on the document to identify the issue. 
+    </div>
+    </legend>
+       <h3 class="govuk-heading-s">Page 1</h3>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="1 - Document quality">
+        <label class="govuk-label govuk-radios__label" for="location1">
+        1 - Document quality
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location2" name="location" type="radio" value="2 - Concealed text">
+        <label class="govuk-label govuk-radios__label" for="location2">
+        2 - Concealed text
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location3" name="location" type="radio" value="3 - Covered content">
+        <label class="govuk-label govuk-radios__label" for="location3">
+        3 - Covered content
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location4" name="location" type="radio" value="4 - Text spacing">
+        <label class="govuk-label govuk-radios__label" for="location4">
+        4 - Text spacing
+        </label>
+      </div>
+           <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location5" name="location" type="radio" value="5 - Text size">
+        <label class="govuk-label govuk-radios__label" for="location5">
+        5 - Text size
+        </label>
+      </div>
+       <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="6 - Unexpected characters">
+        <label class="govuk-label govuk-radios__label" for="location6">
+        6 - Unexpected characters
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location2" name="location" type="radio" value="7 - Untrusted branding">
+        <label class="govuk-label govuk-radios__label" for="location7">
+        7 - Untrusted branding
+        </label>
+      </div>
+    </div><br>
+        <h3 class="govuk-heading-s">Page 2</h3>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="8 - Text alignment">
+        <label class="govuk-label govuk-radios__label" for="location8">
+        8 - Text alignment
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location2" name="location" type="radio" value="9 - Text size">
+        <label class="govuk-label govuk-radios__label" for="location9">
+        9 - Text size
+        </label>
+      </div><br>
+        <h3 class="govuk-heading-s">File property checks</h3>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="Data changes">
+        <label class="govuk-label govuk-radios__label" for="location10">
+        Data changes
+        </label>
+      </div>
+     <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="Document origin">
+        <label class="govuk-label govuk-radios__label" for="location11">
+        Document origin
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="Repair history">
+        <label class="govuk-label govuk-radios__label" for="location12">
+        Repair history
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="Security code">
+        <label class="govuk-label govuk-radios__label" for="location13">
+        Security code
+        </label>
+      </div>
+          
+    </div>
+  </fieldset>
+</div>
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
+
+</div>
+</div>
+
+ 
+
+{% endblock %}

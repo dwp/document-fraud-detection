@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Description of the issue" %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+<h1 class="govuk-heading-l">Description of the issue</h1>
+
+    <form method="post">
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" style="margin-bottom:2em;">
+
+       <label class="govuk-label govuk-label--m" for="location">
+      What do you think we should have identified?
+       </label>
+  
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check1" name="checkName" type="radio" value="Concealed text">
+        <label class="govuk-label govuk-radios__label" for="check1">
+         Concealed text
+        </label>
+        <div id="check1-hint" class="govuk-hint govuk-radios__hint"> Text is the same colour as the document background </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check2" name="checkName" type="radio" value="Covered content">
+        <label class="govuk-label govuk-radios__label" for="check2">
+         Covered content
+        </label>
+         <div id="check2-hint" class="govuk-hint govuk-radios__hint">Text, shapes or images are hiding content underneath</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check3" name="checkName" type="radio" value="Document quality">
+        <label class="govuk-label govuk-radios__label" for="check3">
+         Document quality
+        </label>
+         <div id="check1-hint3" class="govuk-hint govuk-radios__hint">An area of the document appears blurred, jagged or off-colour compared to the rest</div>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check4" name="checkName" type="radio" value="Passport code">
+        <label class="govuk-label govuk-radios__label" for="check4">
+         Passport code
+        </label>
+         <div id="check4-hint" class="govuk-hint govuk-radios__hint">The document is a passport and the code at the bottom is odd</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check5" name="checkName" type="radio" value="Text alignment">
+        <label class="govuk-label govuk-radios__label" for="check4">
+        Text alignment
+        </label>
+         <div id="check5-hint" class="govuk-hint govuk-radios__hint">Text does not align as expected </div>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check6" name="checkName" type="radio" value="Text size">
+        <label class="govuk-label govuk-radios__label" for="check6">
+       Text size
+        </label>
+         <div id="check1-hint" class="govuk-hint govuk-radios__hint"> The font size is inconsistent </div>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check7" name="checkName" type="radio" value="Text spacing">
+        <label class="govuk-label govuk-radios__label" for="check7">
+       Text spacing
+        </label>
+         <div id="check7-hint" class="govuk-hint govuk-radios__hint"> There are unsual gaps in the text </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check8" name="checkName" type="radio" value="Unexpected characters">
+        <label class="govuk-label govuk-radios__label" for="check8">
+        Unexpected characters
+        </label>
+         <div id="check8-hint" class="govuk-hint govuk-radios__hint">There are stange symbols or icons</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check9" name="checkName" type="radio" value="Untrusted branding">
+        <label class="govuk-label govuk-radios__label" for="check9">
+        Untrusted branding
+        </label>
+         <div id="check9-hint" class="govuk-hint govuk-radios__hint"> There is an unexpected logo or watermark from a second brand</div>
+      </div> 
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="check10" name="checkName" type="radio" value="Something else" data-aria-controls="conditional-other">
+        <label class="govuk-label govuk-radios__label" for="check10">
+          Something else
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="title-of-issue" id="title-issue-hint">
+          Brief description of issue
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="title-of-issue" name="titleOfIssue" spellcheck="false" data-maxlength="60" aria-describedby="title-issue-hint">
+        </div>
+    </div>
+  </fieldset>
+   <fieldset class="govuk-fieldset">
+   <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="with-hint">
+      Can you provide more detail?
+    </label>
+  </h1>
+  <div id="with-hint-hint" class="govuk-hint">
+    Do not include personal or financial information like addresses, names, or account numbers
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="moreDetail" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 500 characters
+  </div>
+</div>
+  </fieldset>
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+  </form>
+
+</div>
+</div>
+ 
+
+{% endblock %}

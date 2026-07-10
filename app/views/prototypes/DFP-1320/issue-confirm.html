@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Submitted" %}
+
+{% block content %}
+
+   
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+          {{data['issues'].length | plural("issues")}} submitted
+          </h1>
+        </div>
+         <p class="govuk-body">Thank you for giving us feedback to help us improve our checks. </p>
+       <h2 class="govuk-heading-m">What happens next</h2>
+     
+        <p class="govuk-body">
+          If you agreed, we may email you for further clarification. We will delete your email address after 30 days. 
+        </p>
+      
+  
+             <p class="govuk-body">
+         Return to your current list of <a href="documents" class="govuk-link">document check reports</a>. 
+        </p>
+      
+      </div>
+    </div>
+  </main>
+</div>
+
+ 
+
+{% endblock %}

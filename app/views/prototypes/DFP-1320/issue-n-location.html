@@ -1,0 +1,133 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Location of the issue" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+<h1 class="govuk-heading-l">Location of the issue </h1>
+     <p class="govuk-body">
+   Use the grid view on the document to help identify where we can find the issue you want to give us feedback on.
+ 
+     </p>
+      <form method="post">
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" style="margin-bottom:2em;">
+     <label class="govuk-label govuk-label--m" for="pageNo">
+      Which page is the issue on?
+     </label>
+  
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="page1" name="pageNo" type="radio" value="Page 1">
+        <label class="govuk-label govuk-radios__label" for="page1">
+          Page 1
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="page2" name="pageNo" type="radio" value="Page 2">
+        <label class="govuk-label govuk-radios__label" for="page2">
+        Page 2
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="page2" name="pageNo" type="radio" value="All pages">
+        <label class="govuk-label govuk-radios__label" for="allpages">
+       It applies to all pages
+        </label>
+      </div>
+     </div>
+  </fieldset>
+   <fieldset class="govuk-fieldset"  style="margin-bottom:2em;">
+
+      <label class="govuk-label govuk-label--m" for="location">
+    Where on the page is the issue located?
+      </label>
+       <div id="location-hint" class="govuk-hint">
+     If the issue overlaps, choose where it begins. 
+    </div>
+
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location1" name="location" type="radio" value="Top left">
+        <label class="govuk-label govuk-radios__label" for="location1">
+         Top left
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location2" name="location" type="radio" value="Top centre">
+        <label class="govuk-label govuk-radios__label" for="location2">
+       Top centre
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location3" name="location" type="radio" value="Top right">
+        <label class="govuk-label govuk-radios__label" for="location3">
+         Top right
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location4" name="location" type="radio" value="Middle left">
+        <label class="govuk-label govuk-radios__label" for="location4">
+       Middle left
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location5" name="location" type="radio" value="Middle centre">
+        <label class="govuk-label govuk-radios__label" for="location5">
+        Middle centre
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location6" name="location" type="radio" value="Middle right">
+        <label class="govuk-label govuk-radios__label" for="location6">
+       Middle right
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location7" name="location" type="radio" value="Bottom left">
+        <label class="govuk-label govuk-radios__label" for="location7">
+         Bottom left
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location8" name="location" type="radio" value="Bottom centre">
+        <label class="govuk-label govuk-radios__label" for="location8">
+       Bottom centre
+        </label>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location9" name="location" type="radio" value="Bottom right">
+        <label class="govuk-label govuk-radios__label" for="location9">
+         Bottom right
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="location9" name="location" type="radio" value="All areas">
+        <label class="govuk-label govuk-radios__label" for="location10">
+         It applies to all areas
+        </label>
+      </div>
+    
+    </div>
+  </fieldset>
+  
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+  </form>
+
+
+ </div>
+ </div>
+
+{% endblock %}

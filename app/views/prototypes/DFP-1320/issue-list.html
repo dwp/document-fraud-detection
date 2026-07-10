@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% set pageName="Add another issue" %}
+
+{% block content %}
+   
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     <h1 class="govuk-heading-l">You have added {{data['issues'].length | plural("issues")}}</h1>
+
+
+
+      <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--long">
+    {% for issue in data['issues']%} 
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+    Issue {{loop.index}}.       {{issue.type}} on {{issue.page | lower}} <span style="white-space: nowrap;">({{issue.location | lower}}) </span>
+    </dt>
+  
+    
+    <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+      <ul class="govuk-summary-list__actions-list">
+        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change issue {{loop.index}}</span></a></li>
+        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="issue-delete?loop={{loop.index0}}">Remove</span><span class="govuk-visually-hidden">Remove issue {{loop.index}} from the list</span></a></li>
+      </ul>
+    </dd>
+  </div>
+{% endfor %}
+</dl>
+
+
+<form method="post">
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+      <label class="govuk-label govuk-label--m" for="addAnother">
+        Do you need to add another issue?
+      </label>
+      <div id="location-hint" class="govuk-hint">
+     Select 'Yes' to add another issue or 'No' to continue and submit {{data['issues'].length | plural("issues")}}.  
+    </div>
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="addAnother1" name="addAnother" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="addAnother1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="addAnother2" name="addAnother" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="addAnother2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+</form>
+    </div>
+ 
+</div>
+ 
+
+
+{% endblock %}

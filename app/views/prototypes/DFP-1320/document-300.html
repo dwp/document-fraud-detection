@@ -202,22 +202,61 @@
     <h2 class="govuk-heading-l">Details</h2>
   <h3 class="govuk-heading-m">File property checks</h3>
    <p class="govuk-body">You will not be able to confirm the data yourself unless you can access the file's properties and metadata. We would not expect to find any issues in original documents.  </p>
-   <h3 class="govuk-heading-s">
-    Data changes or repair history
-    </h3>
-    <p class="govuk-body">Our checks have detected that something unexpected has happened to the file. We would not expect this with an original file.
- </p>
-<h3 class="govuk-heading-s">
-    Document origin
-    </h3>
-    <p class="govuk-body">This file was created by software that we do not expect for genuine documents.</p>
-    <h3 class="govuk-heading-s">
-    Security code
-    </h3>
-    <p class="govuk-body">A security code, known as a digital signature, is usually a sign of a document's authenticity if no other document checks have been detected. </p>
-    <p class="govuk-body">For example, if this check appears with covered content or data changes, it may be a sign that the original document was altered. </p>
-
-  
+   <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-visually-hidden">Document quality instances</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Issue</th>
+          <th scope="col" class="govuk-table__header" width="25%">Page</th>
+          <th scope="col" class="govuk-table__header" width="25%">Location</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+       Data changes
+          </th>
+          <td class="govuk-table__cell">
+          Not applicable
+          </td>
+          <td class="govuk-table__cell">
+          PDF metadata
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+          Document origin
+          </th>
+          <td class="govuk-table__cell">
+            Not applicable
+          </td>
+          <td class="govuk-table__cell">
+         File properties
+          </td>
+        </tr>
+              <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+         Repair history
+          </th>
+          <td class="govuk-table__cell">
+           Not applicable
+          </td>
+          <td class="govuk-table__cell">
+        PDF metadata
+          </td>
+          <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+         Security code
+          </th>
+          <td class="govuk-table__cell">
+           Not applicable
+          </td>
+          <td class="govuk-table__cell">
+        PDF metadata
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 

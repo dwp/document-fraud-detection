@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% set pageName="Sign in to the Document Fraud Detection Service" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+     Sign in to the Document Fraud Detection Service
+    </h1>
+    
+       
+   
+      <p class="govuk-body"> This service checks if unexpected changes have been made to a document's pages (visible content) or the file's properties (hidden metadata). It suggest areas to examine during your review.
+       </p>
+       <p class="govuk-body"> The service does not:</p>
+        
+        <ul class="govuk-list govuk-list--bullet">
+          <li>understand what the words or images on the pages mean</li>
+          <li>compare against other documents</li>
+          <li>indicate conclusively that fraud is present</li>
+        </ul>
+        <p class="govuk-body">
+        If you feel further investigation is needed, you may include the information provided to support your referral.
+      </p>
+        <p class="govuk-body">Some examples of documents you can upload:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>passports</li>
+      <li>birth certificates</li>
+      <li>utility bills</li>
+      <li>tenancy agreements</li>
+      <li>wage slips</li>
+      <li>bank statements</li>
+      <li>council tax documents</li>
+      <li>NHS letters</li>
+      <li>school letters</li>
+    </ul>
+<p>We currently only accept PDF format under 20MB. </p>
+
+        {{ govukButton({
+    text: "Sign in",
+    href: "documents-none"
+    }) }}
+ 
+  </div>
+</div>
+{% endblock %}

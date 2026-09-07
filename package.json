@@ -9,13 +9,12 @@
     "npm": "10.x"
   },
   "dependencies": {
-    "@dwp/dwp-frontend": "4.1.0",
-    "@govuk-prototype-kit/common-templates": "3.0.0",
-    "@govuk-prototype-kit/step-by-step": "3.0.0",
-    "@govuk-prototype-kit/task-list": "2.0.0",
-    "govuk-frontend": "6.5.0",
-    "govuk-prototype-kit": "13.20.4",
-    "hmrc-frontend": "7.31.0",
-    "uuid": "14.0.1"
+    "@dwp/dwp-frontend": "^4.1.0",
+    "@govuk-prototype-kit/common-templates": "2.0.1",
+    "@govuk-prototype-kit/step-by-step": "2.2.4",
+    "govuk-frontend": "6.3.0",
+    "govuk-prototype-kit": "13.20.2",
+    "hmrc-frontend": "^7.16.0",
+    "uuid": "^14.0.0"
   }
 }

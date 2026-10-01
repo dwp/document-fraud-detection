@@ -1,78 +1,133 @@
-{% extends "layouts/main-original.html" %}
+{% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% block pageTitle %}
+Prototypes - Document Fraud Detection Service
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
     <h1 class="govuk-heading-xl">
-      Prototype catalogue
+      Prototypes
     </h1>
 
-     <h2 class="govuk-heading-m">Latest</h2>
-      <ul class="govuk-list">
-      <li> <a class="govuk-link" href="prototypes/feedback-mvp/sign-in">Feedback link - August 2026</a>
-      <ul>
-        <li><a class="govuk-link" href="prototypes/feedback-mvp/document-100">Shortcut: document 1 - multiple page and data checks found</a>
-        </li>
-      </li>
-    </ul>
-  </ul>
-     <h2 class="govuk-heading-m">Being built</h2>
-      <ul class="govuk-list">
-      <li> <a class="govuk-link" href="prototypes/DFP-1320/sign-in">Highlight localisation and feedback loop V2 - July 2026</a>
-      <ul><li><a class="govuk-link" href="prototypes/DFP-1320/document-100">Shortcut: document 1 - multiple page and data checks found</a></li>
-            <li><a class="govuk-link" href="prototypes/DFP-1320/document-200">Shortcut: document 2 - nothing found</a></li>
-        <li><a class="govuk-link" href="prototypes/DFP-1320/document-300">Shortcut: document 3 - only data checks found</a></li>
-    <li><a class="govuk-link" href="prototypes/DFP-1320/issue-feedback">Shortcut: give feedback on a result</a></li></ul>
-      </li>
-    </ul>
+    <table class="govuk-table">
 
-    <h2 class="govuk-heading-m">Tested iterations</h2>
-     <ul class="govuk-list">
-      <li> <a class="govuk-link" href="prototypes/DFP-1087/v1/documents-none">Hybrid localisation and feedback loop V1 - June 2026</a>
-      <ul><li><a class="govuk-link" href="prototypes/DFP-1087/v1/document-100">Shortcut: document 1 - something found</a></li>
-      <li><a class="govuk-link" href="prototypes/DFP-1087/v1/document-200">Shortcut: document 2 - nothing found</a></li>
-    <li><a class="govuk-link" href="prototypes/DFP-1087/v1/issue-false">Shortcut: report a false positive or negative</a></li></ul>
-      </li>
-         
-    <ul class="govuk-list">
-            <li> Localisation MVP options
-              <ul>
-        <li><a class="govuk-link" href="prototypes/DFP-1050/v1-tab/documents-none">Localisation with highlighting</a>
-      </li>
-           <li>
-        <a class="govuk-link" href="prototypes/DFP-1050/v2-tab/documents-none">Localisation with grid</a>
-      </li> </ul>
-        <li>
-        <a class="govuk-link" href="prototypes/DFP-993-March26/documents-none">Content finalised - March 2026</a>
-      </li>
-      <li>Content "guidance" testing
-     <ul>
-      <li>
-        <a class="govuk-link" href="prototypes/DFP-975-A/report">DFP-975 - Option A (March 2026)</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="prototypes/DFP-975-B/report">DFP-975 - Option B (March 2026)</a>
-      </li>
-         <li>
-        <a class="govuk-link" href="prototypes/DFP-975-C/report">DFP-975 - Option C (March 2026)</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="prototypes/DFP-948/documents-none">DFP-948 - content changes (February 2026)</a>
-      </li>
-      </ul>
-      </li>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="10%">Version</th>
+              <th scope="col" class="govuk-table__header" width="10%">Status</th>
+          <th scope="col" class="govuk-table__header" width="15%">Date added</th>
+          <th scope="col" class="govuk-table__header">Change log</th>
+                <th scope="col" class="govuk-table__header" width="10%">Link</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">V5</th>
+             <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue">
+              Iterating
+            </strong>
+          </td>
+          <td class="govuk-table__cell" style="text-wrap:nowrap">August 2026</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Feedback link (trial GDS component)</li>
+              <li>New sign-in page (content moving from toggle on document checks page)</li>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="/prototypes/V5" style="text-wrap:nowrap">View V5</a>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">V4</th>
+             <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Building
+            </strong>
+          </td>
+          <td class="govuk-table__cell" style="text-wrap:nowrap">July 2026</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>"Day two" of localisation</li>
+              <li>More robust highlights and colour keys</li>
+              <li>Feedback loop improvements [descoped]</li>
+              <li>Sign in page improvements [descoped from this version]</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="/prototypes/V4" style="text-wrap:nowrap">View V4</a>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">V3</th>
+               <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Tested
+            </strong>
+          </td>
+          <td class="govuk-table__cell" style="text-wrap:nowrap">June 2026</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>"Day one" of localisation</li>
+              <li>Iterations with labels only and grid</li>
+              <li>Feedback loop within the service</li>
+            </ul>
+          </td>
+
+          <td class="govuk-table__cell">
+            <a href="/prototypes/V3" style="text-wrap:nowrap">View V3</a>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">V2</th>
+              <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Released
+            </strong>
+          </td>
+          <td class="govuk-table__cell" style="text-wrap:nowrap">March 2026</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Content updates</li>
+              <li>New check names and guidance added</li>
+            </ul>
+          </td>
       
-      <li>
-        <a class="govuk-link" href="prototypes/beta-feb-26/documents-none">February 2026</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="prototypes/beta-nov-25/documents-none">November 2025</a>
-      </li>
-    </ul>
+          <td class="govuk-table__cell">
+            <a href="/prototypes/V2" style="text-wrap:nowrap">View V2</a>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">V1</th>
+                <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+             Released
+            </strong>
+          </td>
+          <td class="govuk-table__cell" style="text-wrap:nowrap">November 2025</td>
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Baseline text report before new UCD members joined</li>
+            </ul>
+          </td>
+    
+          <td class="govuk-table__cell">
+            <a href="/prototypes/V1" style="text-wrap:nowrap">View V1</a>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
   </div>
 </div>
 

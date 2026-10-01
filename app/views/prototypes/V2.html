@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Document Fraud Detection Service - Version 2
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Version 2
+    </h1>
+
+    {{ govukButton({
+      text: "Start now",
+      href: "/prototypes/DFP-993-March26/documents-none",
+      isStartButton: true
+    }) }}
+
+    <h2 class="govuk-heading-m">Shortcuts</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      <li><a href="/prototypes/DFP-993-March26/document-1" class="govuk-body">Document 1 - Technical error</a></li>
+      <li><a href="/prototypes/DFP-993-March26/document-2" class="govuk-body">Document 2 - Some checks active (real world scenario)</a></li>
+      <li><a href="/prototypes/DFP-993-March26/document-3" class="govuk-body">Document 3 - All checks active</a></li>
+      <li><a href="/prototypes/DFP-993-March26/document-4" class="govuk-body">Document 4 - Nothing found</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">
+      Previous design iterations
+    </h2>
+  <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+
+    <li>
+        <a href="/prototypes/DFP-975-A/report" class="govuk-body">
+DFP-975 Option A (March 2026)</a> - static guidance
+</li>
+
+    <li>
+        <a href="/prototypes/DFP-975-B/report" class="govuk-body">
+DFP-975 Option B (March 2026)</a> - Tailored guidance for visible and hidden checks
+</li>
+
+<li>
+<a href="/prototypes/DFP-975-C/report" class="govuk-body">DFP-975 Option C (March 2026)</a> - Tailored guidance for visible checks 
+</li>
+<li>
+      <a href="/prototypes/DFP-948/documents-none" class="govuk-body">
+DFP-948 Content changes (February 2026)</a> - New check names and descriptions
+</li>
+
+<li>
+<a href="/prototypes/beta-feb-26/documents-none" class="govuk-body">
+February 2026</a> - Detailed, tailored guidance for each check
+
+</li>
+
+</ul>
+
+{% endblock %}

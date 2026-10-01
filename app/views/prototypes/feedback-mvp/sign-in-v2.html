@@ -13,9 +13,17 @@
     
        
    
-      <p class="govuk-body"> This service highlights unusual features of a digital document’s pages or file properties to help you identify potential edits to the document during your review. 
+      <p class="govuk-body"> This service highlights features of a document’s pages or file properties to help you find out if the file has been edited. </p>
+           <p class="govuk-body">
+        It does not indicate conclusively that fraud has taken place but provides signals to consider during your document review.
        </p>
-       <h2 class="govuk-heading-m"> Types of documents you can check </h2>
+
+
+        {{ govukButton({
+    text: "Sign in",
+    href: "documents-none"
+    }) }}
+       <h2 class="govuk-heading-m"> What you can check </h2>
         <ul class="govuk-list govuk-list--bullet">
          <li>bank statements</li>
          <li>birth certificates</li>
@@ -28,13 +36,11 @@
          <li>wage slips</li>
       </ul>
     <p class="govuk-body">This list is not exhaustive. </p>
-     <h2 class="govuk-heading-m"> What the service does not do </h2>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>It does not analyse content with third-party artificial intelligence (AI)</li>
-          <li>It does not understand what the words or images on the pages mean </li>
-           <li>It does not compare results against other documents</li>
-          <li>It does not indicate conclusively that fraud is present</li>
-        </ul>
+
+     {{ govukInsetText({
+      text: "The service does not analyse content with third-party artificial intelligence (AI), understand what the words or images on the pages mean or compare results against other documents. "
+     }) }}
+  
         <p class="govuk-body">
        If you feel further investigation is needed during your review, you may use the information the service provides to support your referral.
       </p>
@@ -42,10 +48,6 @@
    
 
 
-        {{ govukButton({
-    text: "Sign in",
-    href: "documents-none"
-    }) }}
  
   </div>
 </div>

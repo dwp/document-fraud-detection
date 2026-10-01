@@ -129,3 +129,7 @@ router.post('/prototypes/DFP-1320/issue-delete', function(request, response) {
 router.post('/prototypes/DFP-1320/issue-consent', function(request, response) {
         response.redirect("issue-confirm");
 });
+
+router.get('/prototype-catalogue', function (req, res) {
+res.render('prototype-catalogue')
+})

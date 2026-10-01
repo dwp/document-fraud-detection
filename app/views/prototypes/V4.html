@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Document Fraud Detection Service - Version 4
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Version 4
+    </h1>
+
+    {{ govukButton({
+text: "Start now",
+href: "/prototypes/DFP-1320/sign-in",
+isStartButton: true
+}) }}
+
+    <h2 class="govuk-heading-m">
+Shortcuts
+</h2>
+<ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+
+ 
+
+    <li>
+<a href="/prototypes/DFP-1320/document-100" class="govuk-link">
+
+Multiple on-page and data checks found</a>
+</li>
+<li>
+      <a href="/prototypes/DFP-1320/document-200" cclass="govuk-link">
+Nothing found</a>
+</li>
+<li>
+<a href="/prototypes/DFP-1320/document-300" class="govuk-link">Only data checks found
+    </a>
+</li>
+</ul>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-1">
+      Descoped
+    </h2>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0">
+        <li>
+        <a href="/prototypes/DFP-1320/issue-feedback" class="govuk-link">
+Feedback loop</a>
+</li>
+   <li>
+        <a href="/prototypes/DFP-1320/sign-in" class="govuk-link">
+Sign-in page</a>
+</li>
+  </div>
+</div>
+
+{% endblock %}

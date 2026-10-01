@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Document Fraud Detection Service - Version 2
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Version 1
+    </h1>
+
+
+    {{ govukButton({
+      text: "Start now",
+      href: "/prototypes/beta-nov-25/documents-none",
+      isStartButton: true
+    }) }}
+ 
+      <h2 class="govuk-heading-m">Shortcuts</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+      <li><a href="/prototypes/beta-nov-25/report-nonetruepdf-detected" class="govuk-body">None-true PDF detected</a></li>
+      <li><a href="/prototypes/beta-nov-25/report-nonetruepdf-none-found" class="govuk-body">None-true PDF none found</a></li>
+      <li><a href="/prototypes/beta-nov-25/report-passport-none-found" class="govuk-body">Passport none found</a></li>
+      <li><a href="/prototypes/beta-nov-25/report-passport-error" class="govuk-body">Passport error</a></li>
+      <li><a href="/prototypes/beta-nov-25/report-truepdf-detected" class="govuk-body">True PDF detected</a></li>
+      <li><a href="/prototypes/beta-nov-25/report-truepdf-none-found" class="govuk-body">True PDF none found</a></li>
+       <li><a href="/prototypes/beta-nov-25/documents" class="govuk-body">All documents</a></li>
+    </ul>
+    
+
+{% endblock %}

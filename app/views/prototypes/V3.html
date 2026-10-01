@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Document Fraud Detection Service - Version 4
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Version 3
+    </h1>
+
+    {{ govukButton({
+      text: "Start now",
+      href: "/prototypes/DFP-1087/v1/documents-none",
+      isStartButton: true
+    }) }}
+
+     <h2 class="govuk-heading-m">
+Shortcuts
+</h2>
+<ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+   <li>
+    <a href="/prototypes/DFP-1087/v1/issue-false" class="govuk-link">
+      Report a false postive or negative</a>
+</li>
+<li>
+      <a href="/prototypes/DFP-1087/v1/document-200">
+Check for report - nothing found</a>
+</li>
+<li>
+<a href="/prototypes/DFP-1087/v1/document-100" class="govuk-link">Check for report - something found
+    </a>
+</li>
+</ul>
+    <h2 class="govuk-heading-m">
+Previous iterations
+</h2>
+<ul class="govuk-list govuk-list--bullet govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+
+    <li>
+        <a href="/prototypes/DFP-1050/v2-tab/documents" class="govuk-link">
+Localisation with grid</a>
+</li>
+
+    <li>
+        <a href="/prototypes/DFP-1050/v1-tab/documents" class="govuk-link">
+Localisation with highlighting</a>
+</li>
+<a href="/prototypes/DFP-1087/v1/issue-false" class="govuk-link">
+</li>
+
+</ul>
+
+{% endblock %}
